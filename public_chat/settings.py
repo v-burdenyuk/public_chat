@@ -9,7 +9,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['cryptic-thicket-03385.herokuapp.com',]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
