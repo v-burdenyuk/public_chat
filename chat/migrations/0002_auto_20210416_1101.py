@@ -4,23 +4,22 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ('chat', '0001_initial'),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='message',
-            name='author',
+            model_name = 'message',
+            name = 'author',
         ),
         migrations.AddField(
-            model_name='message',
-            name='email',
-            field=models.EmailField(default='test@test.test', max_length=254),
-            preserve_default=False,
+            model_name = 'message',
+            name = 'email',
+            field = models.EmailField(default = 'test@test.test', max_length = 254),
+            preserve_default = False,
         ),
         migrations.DeleteModel(
-            name='Author',
+            name = 'Author',
         ),
     ]

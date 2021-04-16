@@ -1,6 +1,7 @@
 import os
-import dj_database_url
 from pathlib import Path
+
+import dj_database_url
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -9,7 +10,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['cryptic-thicket-03385.herokuapp.com',]
+ALLOWED_HOSTS = ['cryptic-thicket-03385.herokuapp.com', ]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -80,12 +81,10 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
 
 REST_FRAMEWORK = {
     'PAGE_SIZE': 10,
