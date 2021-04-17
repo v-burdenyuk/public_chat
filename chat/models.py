@@ -3,6 +3,7 @@ from django.db import models
 
 
 class Message(models.Model):
+    author = models.CharField(max_length = 20)
     email = models.EmailField()
     creation_date = models.DateTimeField(auto_now_add = True, editable = False)
     update_date = models.DateTimeField(auto_now = True, editable = False)
