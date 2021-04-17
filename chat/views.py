@@ -1,13 +1,15 @@
 from drf_yasg import openapi
 from drf_yasg.views import get_schema_view
-from rest_framework import permissions
-from rest_framework import viewsets
+from rest_framework import permissions, mixins, viewsets
 
 from .models import Message
 from .serializers import MessageSerializer
 
 
-class MessageViewSet(viewsets.ModelViewSet):
+class MessageViewSet(mixins.RetrieveModelMixin,
+                     mixins.ListModelMixin,
+                     mixins.CreateModelMixin,
+                     viewsets.GenericViewSet):
     queryset = Message.objects.all().order_by('-creation_date')
     serializer_class = MessageSerializer
 
